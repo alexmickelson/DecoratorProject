@@ -94,5 +94,18 @@ public class DecoratorMain {
         System.out.println(ticket1.printCost());
 
 
+        Ticket example1 = new EphLax();
+        example1 = new Wifi(example1);
+        example1 = new Blanket(example1);
+
+        System.out.println("Example1: " + example1.printDescription() + " " + example1.printCost());
+
+        Ticket example2 = new EphLax();
+        example2 = new Wifi(example2);
+        example2 = new Blanket(example2);
+        example2 = new Blanket(example2);
+        example2 = new Blanket(example2);
+        example2 = new Eyemask(example2);
+        System.out.println("Example2 " + example2.printDescription() + " " + example2.printCost());
     }
 }
